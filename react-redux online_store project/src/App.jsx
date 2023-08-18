@@ -8,12 +8,13 @@ function App() {
 
   return (
     <div className="className">
-      <Header />
+      
       <Router>
+        <Header />
      
       <Routes>
-        <Route path="/" exact component={ProductListing} />
-        <Route path="/product/:ProductId" exact component={ProductDetail} />
+        <Route path="/" exact element={<ProductListing />} />
+        <Route path="/product/ProductId" exact element={<ProductDetail />} />
         <Route>404 not Found!</Route>
 
       </Routes>
