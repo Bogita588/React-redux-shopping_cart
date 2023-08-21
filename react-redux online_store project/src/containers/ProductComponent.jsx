@@ -6,24 +6,31 @@ import { useSelector } from 'react-redux';
    // 
    const renderList =products.map((product) => {
     const { id, title, image,price, category} = product;
-    return ( <div className="four column wide" key={id}>
-    <div className="ui link cards">
-        <div className="card">
-                <div className="image">
-                    <img src={image} alt = { title} />
-                </div>
-                 <div className="content">
-                    <div className="header">{title}</div>
-                    <div className="meta price">$ {price}</div>
-                    <div className="met">{category}</div>
 
-                </div>
-            
+
+
+
+    //meal-item =our column wide
+
+    return ( 
+        <div className="image-container" key={id}>
+      <div className="image-row">
+        <div className="image-item">
+          <img src={image} alt={title} className=""  height="300px" width="400px" />
+          <div className="item-details">
+            <div className="title">{title}</div>
+            <div className="price">${price}</div>
+            <div className="category">{category}</div>
+          </div>
         </div>
-    </div>
-   
 
-</div>);
+        
+        
+      </div>
+    </div>
+
+
+);
    });
   return (
     <>{renderList}</>
