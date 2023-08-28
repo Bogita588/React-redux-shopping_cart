@@ -12,29 +12,28 @@ import { useSelector } from 'react-redux';
 
     //meal-item =our column wide
 
-    return ( 
-        <div className="image-container" key={id}>
-      <div className="image-row">
-        <div className="image-item">
-          <img src={image} alt={title} className=""  height="300px" width="400px" />
-          <div className="item-details">
-            <div className="title">{title}</div>
-            <div className="price">${price}</div>
-            <div className="category">{category}</div>
-          </div>
+    return(
+
+      
+        <div className='gallery 'key={id}>
+          
+              <img src={image} alt={title} />
+           
+            {/*<div className="content">
+              <div className="header">{title}</div>
+              <div className="meta price">${price}</div>
+              <div className="meta">{category}</div>
+            </div> */}
+         
+        
+
         </div>
 
-        
-        
-      </div>
-    </div>
-
-
-);
-   });
-  return (
-    <>{renderList}</>
-  
+      
     );
-};
-export default ProductComponent;
+   });
+
+   return <>{renderList}</>
+
+  };
+  export default ProductComponent;
